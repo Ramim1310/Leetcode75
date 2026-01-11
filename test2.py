@@ -1,20 +1,20 @@
 class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
         
-        result=[]
+        result=""
         minSize=min(len(word1),len(word2))
         
         for i in range(minSize):
-            result.append(word1[i]+word2[i])
+            result=result+word1[i]+word2[i]
             
-        result.append(word1[minSize:]+word2[minSize:])
+        result=result+word1[minSize:]+word2[minSize:]
         
         
         
-        return "".join(result)
+        return result
     
 test=Solution()
 
-result=test.mergeAlternately('abcd','p')  
+result=test.mergeAlternately('abcd','ab')  
 
 print(result)
